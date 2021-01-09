@@ -141,18 +141,17 @@ const europeanCountry = [
 ];
 const swissRomandeRegion = ["FR", "GE", "JU", "NE", "VL", "VD"];
 
-/**************SORU-1******************/
+/**Stok miktari 500 kg uzerinde olan baliklarin isimleri */
 let over500kgFishList = findOverStockVolumeFishList(fishFarm, 500)
 console.log("Stok miktari 500 kg uzerinde olan baliklarin isimleri:")
 over500kgFishList.map(fish => console.log(`FISH: ${fish.fishType} STOCK: ${fish.stockVolumeInKg}`))
 
-/**************SORU-2******************/
+/**Fiyat araligi 9Fr. ile 12 Fr. arasindaki baliklar */
 let specialPriceRangeFish = findSpecialPriceRangeFish(fishFarm, 9, 12)
 console.log("9-12 fiyat araligindaki baliklarin isimleri:")
 specialPriceRangeFish.map(fish => console.log(`FISH: ${fish.fishType} PRICE: ${fish.price}`))
 
-/**************SORU-3******************/
-//Bern Kantonunda Kis mevsiminde satilan baliklar
+/** Sadece Bern'de ve kis sezonu satilan baliklar */
 let fishInBernInWinter = findInSeasonInLocationFish(fishFarm, "Winter", "BE");
 //Bern Kantonunda Kis mevsiminde satilan baliklarin ekrana yazdirilmasi
 let viewFishInBernInWinter = viewFishType(fishInBernInWinter)
